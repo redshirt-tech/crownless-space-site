@@ -1,0 +1,110 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Stellar Cartography &mdash; Crownless Space</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--orange:#FF9900;--amber:#F4960C;--lav:#CC99CC;--gold:#FFCC66;--pink:#E088C1;--purple:#9676A9;
+--peach:#F4C974;--red:#CC5C5C;--blue:#9676A9;--tan:#FFCC66;
+--ink:#F4C974;--bg:#000;--sbw:190px;--tbh:42px;--r:36px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Antonio','Arial Narrow',Arial,sans-serif;
+font-size:17px;line-height:1.55;letter-spacing:.4px}
+a{color:var(--orange)}
+.c-orange{background:var(--orange)}.c-peach{background:var(--peach)}.c-lav{background:var(--lav)}
+.c-blue{background:var(--blue)}.c-red{background:var(--red)}.c-tan{background:var(--tan)}
+
+.frame{display:grid;grid-template-columns:var(--sbw) 1fr;grid-template-rows:var(--tbh) 1fr;min-height:100vh;column-gap:6px}
+.elbow{grid-area:1/1;background:var(--orange);border-top-left-radius:var(--r);
+display:flex;align-items:center;justify-content:flex-end;padding-right:14px;
+color:#000;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:1px}
+.topbar{grid-area:1/2;display:flex;gap:6px;align-items:stretch}
+.tbar.hug{width:70px}.tbar.grow{flex:1}.tbar.w2{width:120px}
+.tcap{width:42px;border-radius:0 21px 21px 0}
+#search{background:#000;border:2px solid var(--orange);color:var(--peach);width:min(320px,34vw);
+padding:0 16px;border-radius:21px;font:inherit;font-size:15px;text-transform:uppercase;letter-spacing:1px}
+#search::placeholder{color:#7a5c33}
+
+.sidebar{grid-area:2/1;display:flex;flex-direction:column;gap:6px;padding:6px 0 0}
+.brand{background:var(--orange);color:#000;text-decoration:none;font-weight:600;font-size:21px;
+line-height:1.1;letter-spacing:2px;text-align:right;padding:12px 14px}
+.sb-block{color:#000;text-decoration:none;text-align:right;padding:10px 14px;font-weight:600;
+font-size:14px;letter-spacing:1px;text-transform:uppercase;display:flex;justify-content:flex-end;gap:8px;align-items:baseline}
+.sb-block:hover{filter:brightness(1.25)}
+.sb-block .num{font-size:11px;opacity:.7}
+.sb-fill{flex:1;min-height:60px}
+.sb-block.end{border-bottom-left-radius:var(--r);padding-bottom:16px}
+
+.content{grid-area:2/2;padding:28px 28px 40px 22px}
+main{max-width:920px}
+
+.page-head{display:flex;align-items:center;gap:10px;margin:0 0 22px}
+.page-head h1{margin:0;color:var(--orange);font-size:30px;font-weight:600;text-transform:uppercase;letter-spacing:3px;white-space:nowrap}
+.ph-cap{width:42px;height:20px;border-radius:10px 0 0 10px}
+.ph-bar{flex:1;height:20px;border-radius:0 10px 10px 0}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;align-items:start}
+.panel{margin:0 0 22px}
+.panel-head{display:block;color:#000;font-weight:600;font-size:17px;text-transform:uppercase;
+letter-spacing:1.5px;padding:8px 16px;border-radius:18px 18px 0 0;text-decoration:none}
+.panel-head .num{float:right;font-size:12px;opacity:.7}
+.panel-body{border:2px solid #333;border-top:0;border-radius:0 0 12px 12px;padding:6px 18px 14px}
+.panel ul{list-style:none;margin:0;padding:12px 16px;border:2px solid #333;border-top:0;border-radius:0 0 12px 12px}
+.panel li{margin:0 0 12px}
+.panel li a{color:var(--peach);text-decoration:none;text-transform:uppercase;letter-spacing:1px;font-weight:600}
+.panel li a:hover{color:var(--orange)}
+.panel li p{margin:2px 0 0;font-size:14px;color:#b08d5f}
+.empty{color:#7a5c33;font-style:italic}
+h2,h3{color:var(--orange);text-transform:uppercase;letter-spacing:2px;font-weight:600}
+strong{color:var(--tan)}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:10px 0}
+td,th{border:1px solid #444;padding:6px 12px;text-align:left}
+th{background:#1a1a1a;color:var(--orange);text-transform:uppercase;letter-spacing:1px}
+.badge{font-size:11px;letter-spacing:1px;color:#000;background:rgba(0,0,0,.25);
+padding:2px 10px;border-radius:99px;vertical-align:middle}
+.badge.gm{background:var(--red);color:#000}
+
+#results{position:fixed;top:52px;right:24px;width:min(420px,90vw);max-height:70vh;overflow:auto;
+background:#000;border:2px solid var(--orange);border-radius:14px;padding:10px;z-index:9}
+#results a{display:block;padding:8px 10px;border-radius:8px;text-decoration:none;color:var(--peach);
+text-transform:uppercase;letter-spacing:1px}
+#results a:hover{background:#1a1200}
+#results .sec{font-size:11px;color:var(--orange);letter-spacing:2px}
+
+@media(max-width:700px){:root{--sbw:120px}.brand{font-size:15px}.sb-block{font-size:11px;padding:8px 10px}}
+</style></head><body>
+
+<div class="frame">
+  <a class="elbow" href="index.html">LCARS 47-291</a>
+  <div class="topbar">
+    <div class="tbar hug c-orange"></div>
+    <input id="search" type="search" placeholder="SEARCH DATABASE" autocomplete="off">
+    <div class="tbar grow c-lav"></div>
+    <div class="tbar w2 c-blue"></div>
+    <div class="tcap c-orange"></div>
+  </div>
+  <aside class="sidebar">
+    <a class="brand" href="index.html">CROWNLESS<br>SPACE</a>
+    <a class="sb-block c-orange" href="npcs.html">Personnel<span class="num">02</span></a><a class="sb-block c-lav" href="locations.html">Stellar Cartography<span class="num">01</span></a><a class="sb-block c-red" href="quests.html">Mission Log<span class="num">01</span></a><a class="sb-block c-blue" href="ships.html">Ship Systems<span class="num">01</span></a><a class="sb-block c-tan" href="rules.html">Operations Manual<span class="num">01</span></a>
+    <div class="sb-fill c-blue"></div>
+    <div class="sb-block c-peach end">ACCESS &middot; CREW</div>
+  </aside>
+  <div class="content"><main><div class="page-head"><span class="ph-cap c-lav"></span><h1>Stellar Cartography</h1><span class="ph-bar c-lav"></span></div><article class="panel entry" id="harrow-station"><div class="panel-head c-lav">Harrow Station</div><div class="panel-body"><p>A ring station built into the husk of a decommissioned warship. Population ~4,000: dockworkers, smugglers, mercenaries, and the stubborn. No central law — districts are run by whoever can hold them.</p>
+<h3>Notable spots</h3>
+<ul>
+<li><strong>The Gimbal</strong> — cantina and de facto job board. Ask for Wex.</li>
+<li><strong>Drydock 3</strong> — where the party's ship is berthed. Cheap, drafty, discreet.</li>
+<li><strong>The Chandlery</strong> — supplies, ammo, and "sourced" ship parts.</li>
+</ul></div></article></main></div>
+</div>
+<div id="results" hidden></div>
+<script src="search.js"></script><script>
+const q=document.getElementById('search'),r=document.getElementById('results');
+q.addEventListener('input',()=>{const v=q.value.trim().toLowerCase();
+if(!v||!window.SEARCH_INDEX){r.hidden=true;return}
+const hits=SEARCH_INDEX.filter(e=>(e.t+' '+e.x).toLowerCase().includes(v)).slice(0,12);
+r.innerHTML=hits.map(e=>`<a href="${e.u}"><span class="sec">${e.s}</span><br>${e.t}</a>`).join('')||'<a>NO MATCHES</a>';
+r.hidden=false});
+document.addEventListener('click',e=>{if(!r.contains(e.target)&&e.target!==q)r.hidden=true});
+</script></body></html>
