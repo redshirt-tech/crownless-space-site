@@ -13,7 +13,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:'Antonio','Arial
 font-size:17px;line-height:1.55;letter-spacing:.4px}
 a{color:var(--orange)}
 .c-orange{background:var(--orange)}.c-peach{background:var(--peach)}.c-lav{background:var(--lav)}
-.c-blue{background:var(--blue)}.c-red{background:var(--red)}.c-tan{background:var(--tan)}
+.c-blue{background:var(--blue)}.c-red{background:var(--red)}.c-tan{background:var(--tan)}.c-pink{background:var(--pink)}
 
 .frame{display:grid;grid-template-columns:var(--sbw) 1fr;grid-template-rows:var(--tbh) 1fr;min-height:100vh;column-gap:6px}
 .elbow{grid-area:1/1;background:var(--orange);border-top-left-radius:var(--r);
@@ -86,52 +86,184 @@ text-transform:uppercase;letter-spacing:1px}
   </div>
   <aside class="sidebar">
     <a class="brand" href="index.html">CROWNLESS<br>SPACE</a>
-    <a class="sb-block c-orange" href="npcs.html">Personnel<span class="num">02</span></a><a class="sb-block c-lav" href="locations.html">Stellar Cartography<span class="num">01</span></a><a class="sb-block c-red" href="quests.html">Mission Log<span class="num">01</span></a><a class="sb-block c-blue" href="ships.html">Ship Systems<span class="num">01</span></a><a class="sb-block c-tan" href="rules.html">Operations Manual<span class="num">01</span></a>
+    <a class="sb-block c-orange" href="npcs.html">Personnel<span class="num">00</span></a><a class="sb-block c-lav" href="locations.html">Stellar Cartography<span class="num">00</span></a><a class="sb-block c-red" href="quests.html">Mission Log<span class="num">01</span></a><a class="sb-block c-blue" href="ships.html">Ship Systems<span class="num">01</span></a><a class="sb-block c-pink" href="species.html">Xenodatabase<span class="num">02</span></a><a class="sb-block c-tan" href="rules.html">Operations Manual<span class="num">03</span></a>
     <div class="sb-fill c-blue"></div>
     <div class="sb-block c-peach end">ACCESS &middot; CREW</div>
   </aside>
-  <div class="content"><main><div class="page-head"><span class="ph-cap c-blue"></span><h1>Ship Systems</h1><span class="ph-bar c-blue"></span></div><article class="panel entry" id="the-vagrant-crown"><div class="panel-head c-blue">The Vagrant Crown (Party Ship)</div><div class="panel-body"><table>
+  <div class="content"><main><div class="page-head"><span class="ph-cap c-blue"></span><h1>Ship Systems</h1><span class="ph-bar c-blue"></span></div><article class="panel entry" id="the-beagle"><div class="panel-head c-blue">The Beagle (Kodiak-class)</div><div class="panel-body"><p>A refurbished <strong>Kodiak-class warship</strong>. These ships were mothballed after the Zookeeper war for being unsuited to peacetime, but their overengineered power systems and single-piece, Solaran-made <strong>hyperdiamond superstructure</strong> made them ideal for repurposing as long-range exploration and patrol ships.</p>
+<p>The refit stripped the advanced weapons systems, heat sinks, beam capacitors, and redundant shield arrays — leaving ample cargo space — and added a new <strong>protomatter reactor</strong> and state-of-the-art <strong>FTL torii drive</strong>. The ship retains a basic beam weapon, shield array, and spartan crew amenities. Ship and crew can be upgraded with additional Requisition.</p>
+<h2>Tactical</h2>
+<table>
 <thead>
 <tr>
-<th></th>
-<th></th>
+<th>System</th>
+<th>Effect</th>
+<th>Crewed</th>
+<th>Damaged</th>
+<th>Upgrade</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Class</strong></td>
-<td>Kestrel-pattern light freighter</td>
+<td><strong>Command Bridge</strong></td>
+<td>Must be operational and crewed for the ship to function</td>
+<td>Required</td>
+<td>All ship rolls −1</td>
+<td>Battle bridge: run the ship from a reinforced control center during combat/emergencies</td>
 </tr>
 <tr>
-<td><strong>Crew</strong></td>
-<td>6 (min 2)</td>
+<td><strong>Security</strong></td>
+<td>Security team defends the ship, joins away missions on request; armory + brig</td>
+<td>Security team resides here (security-only)</td>
+<td>No weapons/armor access; brig unusable</td>
+<td>Additional security team</td>
 </tr>
 <tr>
-<td><strong>Speed</strong></td>
-<td>Fast (Verge-rated drive)</td>
+<td><strong>Particle Beam Cannon</strong></td>
+<td>2d6 damage on hit; effective to ~1 light-second (atmosphere blooms the beam)</td>
+<td>Free reroll per crewed weapon</td>
+<td>Damage −2</td>
+<td>Damage +2</td>
 </tr>
 <tr>
-<td><strong>Hull</strong></td>
-<td>24 / 30 — patched after the Meridian ambush</td>
-</tr>
-<tr>
-<td><strong>Berth</strong></td>
-<td>Drydock 3, Harrow Station</td>
+<td><strong>Shuttle Bay</strong></td>
+<td>Two shuttles: 6-seat cockpit, modular rear (cargo container / 20 passengers / 6 people long-range). ~8h to reconfigure with a full team</td>
+<td>Reconfigure a shuttle</td>
+<td>Shuttle cannot launch</td>
+<td>Second shuttle</td>
 </tr>
 </tbody>
 </table>
-<h3>Systems</h3>
-<ul>
-<li><strong>Drive:</strong> Overtuned — +1 to escape maneuvers, but on a fumble the coolant loop trips (drive offline 1 round).</li>
-<li><strong>Sensors:</strong> Military surplus. Long-range, distinctive signature (recognizable to anyone who's scanned it before).</li>
-<li><strong>Armament:</strong> Twin light turrets (dorsal/ventral), one shot per turret per round.</li>
-<li><strong>The Hold:</strong> 40 tons. Concealed smuggling compartment holds 2 tons or 4 uncomfortable people.</li>
-</ul>
-<h3>Upgrade wishlist</h3>
-<ul>
-<li>Point-defense grid (8,000 marks, Meridian shipyard)</li>
-<li>Signature dampener (6,500 marks, "ask at the Chandlery")</li>
-</ul></div></article></main></div>
+<h2>Operations</h2>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Effect</th>
+<th>Crewed</th>
+<th>Damaged</th>
+<th>Upgrade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reactor</strong> (protomatter)</td>
+<td>Powers the ship; negative energy also feeds wormholes, tachyon comms/sensors</td>
+<td>Generates a <strong>Power token</strong> to boost another system</td>
+<td>No Power tokens; non-essentials shut down</td>
+<td>+1 Power token when crewed</td>
+</tr>
+<tr>
+<td><strong>Higgs Drive</strong></td>
+<td>Conventional sublight travel (near-zero inertial mass bubble; not superluminal)</td>
+<td>—</td>
+<td>Ship cannot maneuver in real space</td>
+<td>More combat maneuverability</td>
+</tr>
+<tr>
+<td><strong>Engineering</strong></td>
+<td>Central coordination hub for technical systems</td>
+<td>Must be crewed for ship to function</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Fabrication</strong></td>
+<td>Manufacture equipment and parts on-demand</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Torii Drive</strong></td>
+<td>FTL travel via chained primordial wormholes; unreliable near gravity wells. Requires a <strong>sentient astrogator</strong> (multidimensional sense)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2>Science</h2>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Effect</th>
+<th>Crewed</th>
+<th>Damaged</th>
+<th>Upgrade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Shield Array</strong></td>
+<td>Shields +1</td>
+<td>Roll Repair/Electronics once per combat round to regain 1 lost shield</td>
+<td>Shields −1</td>
+<td>Shields +1</td>
+</tr>
+<tr>
+<td><strong>Main Computer</strong></td>
+<td>One <strong>Compute token</strong>: automate a system as if crewed, or +1 to its rolls</td>
+<td>Uncrewed</td>
+<td>No Compute tokens</td>
+<td>Additional Compute token</td>
+</tr>
+<tr>
+<td><strong>Sensors</strong></td>
+<td>Required for sensor checks; tachyonic long-range detection out to several light-years</td>
+<td>Sensor rolls +1</td>
+<td>Immediate vicinity only</td>
+<td>Sensor rolls +1</td>
+</tr>
+<tr>
+<td><strong>Science Lab</strong></td>
+<td>Science and Research rolls on discoveries</td>
+<td>Crew may roll Science/Research without PCs</td>
+<td>Unusable</td>
+<td>Specialize (biology, geology, archaeology…): free reroll in specialty</td>
+</tr>
+<tr>
+<td><strong>Stellar Cartography</strong></td>
+<td>Allows mapping of sectors; data uploaded to the Cooperative database</td>
+<td>Must be crewed to function</td>
+<td>Cannot map</td>
+<td>Mapping roll +1</td>
+</tr>
+</tbody>
+</table>
+<h2>Support</h2>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Effect</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Crew Quarters</strong></td>
+<td>Houses 3 crew teams</td>
+<td>Each additional team: −1 Morale</td>
+</tr>
+<tr>
+<td><strong>Crew Support Facilities</strong></td>
+<td>Commissary, fitness, rec, sim bay…</td>
+<td>Each additional facility reduces Morale penalty by 1</td>
+</tr>
+<tr>
+<td><strong>Life Support</strong></td>
+<td>Maintains livable environment</td>
+<td>Decentralized; can't be damaged directly, but ship-wide effects may cause malfunction</td>
+</tr>
+<tr>
+<td><strong>Medical Bay</strong></td>
+<td>Autodoc: one Healing roll at d4 up to 24h after a Wound (vs. Golden Hour)</td>
+<td>Medical team adds regular Healing rolls alongside the autodoc</td>
+</tr>
+</tbody>
+</table></div></article></main></div>
 </div>
 <div id="results" hidden></div>
 <script src="search.js"></script><script>

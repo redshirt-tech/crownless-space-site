@@ -13,7 +13,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:'Antonio','Arial
 font-size:17px;line-height:1.55;letter-spacing:.4px}
 a{color:var(--orange)}
 .c-orange{background:var(--orange)}.c-peach{background:var(--peach)}.c-lav{background:var(--lav)}
-.c-blue{background:var(--blue)}.c-red{background:var(--red)}.c-tan{background:var(--tan)}
+.c-blue{background:var(--blue)}.c-red{background:var(--red)}.c-tan{background:var(--tan)}.c-pink{background:var(--pink)}
 
 .frame{display:grid;grid-template-columns:var(--sbw) 1fr;grid-template-rows:var(--tbh) 1fr;min-height:100vh;column-gap:6px}
 .elbow{grid-area:1/1;background:var(--orange);border-top-left-radius:var(--r);
@@ -86,38 +86,70 @@ text-transform:uppercase;letter-spacing:1px}
   </div>
   <aside class="sidebar">
     <a class="brand" href="index.html">CROWNLESS<br>SPACE</a>
-    <a class="sb-block c-orange" href="npcs.html">Personnel<span class="num">02</span></a><a class="sb-block c-lav" href="locations.html">Stellar Cartography<span class="num">01</span></a><a class="sb-block c-red" href="quests.html">Mission Log<span class="num">01</span></a><a class="sb-block c-blue" href="ships.html">Ship Systems<span class="num">01</span></a><a class="sb-block c-tan" href="rules.html">Operations Manual<span class="num">01</span></a>
+    <a class="sb-block c-orange" href="npcs.html">Personnel<span class="num">00</span></a><a class="sb-block c-lav" href="locations.html">Stellar Cartography<span class="num">00</span></a><a class="sb-block c-red" href="quests.html">Mission Log<span class="num">01</span></a><a class="sb-block c-blue" href="ships.html">Ship Systems<span class="num">01</span></a><a class="sb-block c-pink" href="species.html">Xenodatabase<span class="num">02</span></a><a class="sb-block c-tan" href="rules.html">Operations Manual<span class="num">03</span></a>
     <div class="sb-fill c-blue"></div>
     <div class="sb-block c-peach end">ACCESS &middot; CREW</div>
   </aside>
-  <div class="content"><main><div class="page-head"><span class="ph-cap c-tan"></span><h1>Operations Manual</h1><span class="ph-bar c-tan"></span></div><article class="panel entry" id="house-rules"><div class="panel-head c-tan">House Rules & Campaign Mechanics</div><div class="panel-body"><h2>Reputation</h2>
-<p>The party has a Reputation score with each major faction (-5 to +5). It shifts based on visible actions, not intentions. Current standings are tracked on this page after each session.</p>
-<table>
-<thead>
-<tr>
-<th>Faction</th>
-<th>Standing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Harrow Station independents</td>
-<td>+2</td>
-</tr>
-<tr>
-<td>Meridian Port Authority</td>
-<td>+1</td>
-</tr>
-<tr>
-<td>Ashen Syndicate</td>
-<td>-1</td>
-</tr>
-</tbody>
-</table>
-<h2>Ship Combat: Stations</h2>
-<p>Each PC takes a station (Helm, Guns, Engineering, Comms/Sensors). You act at your station on your turn; swapping stations costs your move.</p>
-<h2>Marks &amp; Upkeep</h2>
-<p>Ship upkeep is 500 marks per month (dock fees, fuel, patches). Miss it and the ship starts each session with one nagging malfunction of the GM's choice.</p></div></article></main></div>
+  <div class="content"><main><div class="page-head"><span class="ph-cap c-tan"></span><h1>Operations Manual</h1><span class="ph-bar c-tan"></span></div><article class="panel entry" id="duty-and-requisition"><div class="panel-head c-tan">Duty, Requisition & Command</div><div class="panel-body"><h2>The Burden of Command</h2>
+<p>The players are the commanders of a newly-chartered deep space mission: a recently-refurbished starship, the responsibility to uphold the Protocols, keep the crew safe, and fulfill the stated mission. Commanders decide where the ship goes, what to prioritize, and how to engage with the galaxy — often alone, hours or days from reinforcements, sometimes out of communications range, with broad latitude for field discretion.</p>
+<p>Deep space missions are less common since the war ended, so capable crews are in high demand: expect regular requests from the four fleet divisions.</p>
+<h3>The Mission</h3>
+<p>The party shares a single mission statement — as specific or broad as you choose. Questions to consider: How do you want to change the galaxy? What missions do you want? What goals and values do you prioritize? How will you know you're fulfilling it? The mission can change mid-campaign.</p>
+<h3>Command Structure</h3>
+<p>In-game, run the ship however you like — one captain, rotating command, committee, or an NPC captain as a conduit for group decisions — as long as you have a way to decide together. The only caveat: <strong>High Command may occasionally give direct orders</strong> in an emergency or as discipline.</p>
+<h2>CyberCon and Duty</h2>
+<p>The Cooperative runs on <strong>CyberCon</strong>, a distributed cybernetic economic coordination framework. Members share wants, needs, abilities, and outputs; a decentralized planning algorithm produces goals ratified by the appropriate level of governance, codified as discrete <strong>Duty</strong>.</p>
+<ul>
+<li>Members are encouraged to fulfill lifetime Duty; benefits (better accommodations, luxuries, priority access) scale with contribution. Social pressure applies.</li>
+<li><strong>Cooperative Service</strong> contracts commit members fully for a term of years. <strong>Interstellar Service</strong> is the most difficult and dangerous — and one of the highest forms of duty.</li>
+</ul>
+<h2>Requisition</h2>
+<p>As commanders of a chartered mission, you have <strong>Requisition</strong> to build your ship and hire crew. Requisition obligates an equivalent amount of <strong>Duty every cycle</strong> (cycles = Lunar orbits, 28 days).</p>
+<p>Fulfilling Duty: fleet division missions, discoveries, eliminating threats, upholding the Protocols heroically, or advancing Cooperative goals. Surplus Duty carries forward, or can raise your <strong>Service Rating</strong> — more Requisition, and an equivalently higher Duty quota. <em>To whom much is given, much is expected.</em></p></div></article><article class="panel entry" id="setting-primer"><div class="panel-head c-tan">Setting Primer — The Cooperative</div><div class="panel-body"><p>The year is <strong>2300 AD</strong> — 20 years since <strong>VZ Day</strong>, the end of the war against the Zookeeper machine swarms that threatened to destroy humanity and for millennia prevented sentient life in the region from exploring the galaxy. Humanity was assisted by the <strong>Lyrans</strong>, a civilization driven from their own home by these same extermination machines, who found a new home in the Sol system.</p>
+<p>Together, Humans and Lyrans mounted the defense of Sol and cleared the nearby star systems of the Zookeeper menace, meeting several other civilizations along the way. The war was long, brutal, and costly, but it led to the birth of the <strong>Interstellar Cooperative</strong>, now numbering billions of members across dozens of species and star systems.</p>
+<h2>Humanity's Road: From Ruin to the Stars</h2>
+<ul>
+<li><strong>The Collapse</strong> — In the late 21st century the world descended into chaos. The population halved during the wars, and halved again in the aftermath. The elites launched arks into space on fusion torch ships and were never heard from again.</li>
+<li><strong>The Founding</strong> — The International Cooperative rallied the remains of humanity around duty and shared responsibility rather than rights and privileges. The fractured old world couldn't compete; a generation later humanity was unified for the first time in history.</li>
+<li><strong>The New Renaissance</strong> — The ecosystem rebounded, industry was rebuilt, and the Grand Unified Theory unlocked <strong>monopolium (magmatter)</strong> — the key to negative energy, FTL communication, and FTL travel. It also drew the attention of the Zookeepers.</li>
+<li><strong>First Contact</strong> — As Zookeeper swarms began cleansing the Solar system, the Lyran migration fleet arrived at superluminal speed and destroyed them within hours.</li>
+<li><strong>The Great Mobilization</strong> — A generation-long plan: space elevators, asteroid mining, the orbital ring around Earth, the Jupiter magmatter extraction facility, the L5 shipyard. Ships, drones, and orbital defenses built by the megaton.</li>
+<li><strong>The War</strong> — Losses were high at first, but the fleet learned and turned the tide, then took the fight outward, system by system, using huge gateway ships to project battle fleets.</li>
+<li><strong>The Assembly</strong> — With war's end in sight, the Assembly of Planets was formed and ratified the Cooperative Protocols as the basis of law. Fleet control passed to <strong>High Command</strong> under the Assembly's authority.</li>
+<li><strong>Swords to Plowshares</strong> — Warships were retrofitted, decommissioned, or recycled; gateway ships became permanent transit hubs (<strong>waygates</strong>).</li>
+</ul>
+<h2>Life in the Cooperative Today</h2>
+<p>Member worlds are connected by an interstellar <strong>tachyonic communications network</strong> and, where infrastructure allows, <strong>waygates</strong> — wormhole transit links. All members have unconditional access to basic services. Automation is the norm; people find purpose in mastery, relationships, and contribution. Scarcity at the individual level is largely solved, but the universe still imposes limits — and other civilizations are increasingly aware of the Cooperative.</p></div></article><article class="panel entry" id="the-protocols"><div class="panel-head c-tan">The Protocols</div><div class="panel-body"><p>Officially <strong>The Cooperative Association of Sentient Beings</strong>, the Cooperative isn't an empire or government but a set of shared protocols and infrastructure spanning many star systems, species, and individuals.</p>
+<h2>The Seven Core Principles</h2>
+<ul>
+<li><strong>Sacrifice</strong> — The needs of the many outweigh the needs of the few. Members have a duty to the greater good of the membership.</li>
+<li><strong>Aid</strong> — The needs of one are the responsibility of all. The membership has a duty to provide for each member.</li>
+<li><strong>Agency</strong> — Relationships must be mutually agreeable. No member may hold dominion over another sentient being.</li>
+<li><strong>Equity</strong> — Transactions must be mutually beneficial. No member may exploit another sentient being.</li>
+<li><strong>Safety</strong> — An injury to one is an injury to all. No member may harm another sentient being, except in defense of life, and members have a duty to defend other members from harm.</li>
+<li><strong>Volition</strong> — Membership is voluntary and opt-in. No persuading, coercing, dissuading, or obstructing — even Cooperative-born individuals must actively seek membership.</li>
+<li><strong>Care</strong> — A duty of care may be extended to those with inherently limited agency (e.g., children) without obligating them to strict observance.</li>
+</ul>
+<h2>Membership</h2>
+<ul>
+<li>Open to all sentient beings, on an <strong>individual</strong> basis. No group may compel an individual; no individual may compel a group.</li>
+<li>Contingent only on acceptance and observance of the Protocols. No member may refuse membership to an observant individual.</li>
+<li><strong>Inalienable</strong> — cannot be transferred or renounced. Members may deprioritize obligations to members who themselves fail to observe Protocol.</li>
+</ul>
+<h2>Non-members</h2>
+<p>Non-members move freely through Cooperative jurisdictions (unless specified) and are expected to obey local laws. Members aren't obligated to materially support non-members, but should observe the spirit of the Protocols — and must follow local law in non-member jurisdictions, holding to the Protocols' spirit where they conflict.</p>
+<h2>Chartered Institutions and Projects (CIPs)</h2>
+<p>Members may form associations: <strong>Institutions</strong> (ongoing mandate) and <strong>Projects</strong> (dissolved when their goal is met or failed). Each must have a <strong>Charter</strong>. Key rules:</p>
+<ul>
+<li>CIPs uphold the Protocols above all other priorities — including their own existence.</li>
+<li>Standing comes from endorsements (quantity and quality). Good standing earns priority resource consideration.</li>
+<li><strong>Charter members</strong> take responsibility for the CIP's resources; their Service Rating rises and falls with the CIP's Duty performance. <strong>Associate members</strong> pledge material assistance, which counts toward their individual Duty.</li>
+<li>CIPs have their own <strong>Organizational Service Rating (OSR)</strong> — a reflection of scale, criticality, and track record.</li>
+<li>Protocol violations trigger review: public admonishment, loss of standing, potentially dissolution.</li>
+</ul>
+<h2>Conflict Resolution</h2>
+<p>Membership is kinship; conflict must be resolved in that spirit. <strong>Discuss before escalating.</strong> Then escalate judiciously and decisively: public formal discussion → mediation → binding arbitration → declaration of injury/loss → declaration of warning → use of force.</p>
+<p>The ladder of force: <strong>Restrain → Subdue → Injure → Maim → Destroy</strong> (a last resort, justifiable only to preserve life in defense of self or others).</p></div></article></main></div>
 </div>
 <div id="results" hidden></div>
 <script src="search.js"></script><script>
